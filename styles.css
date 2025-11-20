@@ -163,7 +163,7 @@ body {
 /* Hamburger lines */
 .bar {
     width: 24px;
-    height: 3px;
+    height: 4px;
     margin: 3px 0;
     background-color: var(--color-primary);
     display: block;
@@ -336,6 +336,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url("images/skate_1.jpg") ;
+    background-position: 25% 70% bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .news-placeholder {
@@ -659,6 +663,7 @@ body {
     font-size: 2rem;
     color: var(--color-surface);
     text-align: center;
+    background-image: ;
 }
 
 /* Contact Section */
