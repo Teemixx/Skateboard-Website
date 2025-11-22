@@ -210,12 +210,7 @@ body {
 }
 
 .hero-heading {
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+   background-image: url(images/Logo_1.png);
 }
 
 .hero-description {
@@ -337,7 +332,7 @@ body {
     align-items: center;
     justify-content: center;
     background-image: url("images/skate_1.jpg") ;
-    background-position: 25% 70% bottom;
+    background-position: center bottom;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -651,19 +646,22 @@ body {
 }
 
 .about-image {
-    height: 400px;
-    background: linear-gradient(135deg, var(--color-hero-gradient-start) 0%, var(--color-hero-gradient-end) 100%);
+    height: 180px;
+    background-color: var(--color-primary-light);
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url('images/skate_11.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .image-placeholder {
     font-size: 2rem;
     color: var(--color-surface);
     text-align: center;
-    background-image: ;
 }
 
 /* Contact Section */
