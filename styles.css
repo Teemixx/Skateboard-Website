@@ -277,14 +277,37 @@ body {
     padding: 0 24px;
 }
 
+.mission-logo {
+    display: block;
+    max-width: 100px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 0 auto;
+    border-radius: 12px;
+}
+.mission-img {
+    display: block;
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 0 auto;
+    border-radius: 12px;
+}
+
 .mission-card {
-    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
-    padding: 28px 24px;
+    background: var(--color-primary);
     border-radius: 22px;
     box-shadow: 0 20px 35px rgba(239, 81, 50, 0.25);
     text-align: left;
     color: var(--color-white);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 22px;
+}
+
+.mission-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .mission-card:hover {
@@ -294,7 +317,6 @@ body {
 
 .mission-card h3 {
     font-size: 1.4rem;
-    margin-bottom: 8px;
     color: var(--color-white);
 }
 
