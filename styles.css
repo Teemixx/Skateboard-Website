@@ -456,13 +456,38 @@ body {
 
 .mitglied-info ul {
     list-style: none;
-    margin-bottom: 30px;
+    /*margin-bottom: 30px;*/
+    padding: 0;
+    margin: 0;
 }
 
 .mitglied-info ul li {
     margin-bottom: 12px;
     font-size: 1.1rem;
     color: var(--color-text-secondary);
+}
+
+.mitglied-info li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.mitglied-info li::before {
+    content: "✅";
+    flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+}
+
+.mitglied-info li > * {
+    flex: 1 1 auto;
 }
 
 .quote {
