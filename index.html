@@ -169,20 +169,63 @@
                 </div>
                 <div class="mitglied-form">
                     <h3>Interesse? Kontaktiere uns!</h3>
-                    <form class="membership-form">
+                    
+                    <form
+                        class="membership-form"
+                        name="membership"
+                        method="POST"
+                        data-netlify="true"
+                        data-netlify-honeypot="bot-field"
+                        action="/danke.html"
+                    >
+                        <!-- required for Netlify -->
+                        <input type="hidden" name="form-name" value="membership">
+
+                        <!-- honeypot (spam protection) -->
+                        <p style="display:none;">
+                        <label>
+                            Dont fill this out:
+                            <input name="bot-field">
+                        </label>
+                        </p>
+
                         <div class="form-group">
-                            <input type="text" placeholder="Dein Name" required>
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Dein Name"
+                            required
+                        >
                         </div>
+
                         <div class="form-group">
-                            <input type="email" placeholder="Deine E-Mail" required>
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Deine E-Mail"
+                            required
+                        >
                         </div>
+
                         <div class="form-group">
-                            <input type="tel" placeholder="Telefonnummer (optional)">
+                        <input
+                            type="tel"
+                            name="phone"
+                            placeholder="Telefonnummer (optional)"
+                        >
                         </div>
+
                         <div class="form-group">
-                            <textarea placeholder="Nachricht (optional)" rows="3"></textarea>
+                        <textarea
+                            name="message"
+                            placeholder="Nachricht (optional)"
+                            rows="3"
+                        ></textarea>
                         </div>
-                        <button type="submit" class="submit-btn">Interesse anmelden</button>
+
+                        <button type="submit" class="submit-btn">
+                            Interesse anmelden
+                        </button>
                     </form>
                 </div>
             </div>

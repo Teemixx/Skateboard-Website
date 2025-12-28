@@ -20,11 +20,12 @@
     --color-hero-gradient-start: #667eea;
     --color-hero-gradient-end: #764ba2;
     --color-hero-overlay: rgba(0, 0, 0, 0.45);
+    --nav-height: 64px;
 }
 
 html{
     scroll-behavior: smooth;
-    scroll-padding-top: 80px; /* adjust based on navbar height */
+    scroll-padding-top: 80px;/*var(--nav-height);  could do 64px*/
 }
 body {
     font-family: 'Roboto', sans-serif;
@@ -47,7 +48,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1rem;
+    font-size: 1.8rem;
     position: fixed;
     top: 0;
     z-index: 999;
@@ -79,7 +80,7 @@ body {
     align-items: center;
     cursor: pointer;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 2.5rem;
     flex: 1 1 auto;
 }
 
@@ -121,11 +122,13 @@ body {
     padding: 0 1rem;
     height: 100%;
     transition: all 0.3s ease;
-    border-bottom: 1px solid var(--color-text-secondary);
+    /*border-bottom: 1px solid var(--color-text-secondary);*/
+    border-bottom: none;
 }
 
 .nav-link:hover {
     color: var(--color-primary-light);
+      
 }
 
 /* Hamburger button experiments for Samsung S8 viewport */
@@ -1010,8 +1013,58 @@ body {
         display: none;
     }
 
+    .nav-link {
+        padding: 0 1.5rem;
+        border-bottom: none;
+        position: relative;
+        border: 1px solid transparent;  /* prevents jump on hover */
+        border-radius: 10px;            /* rounded effect */
+        /*transition: width 0.3s ease;*/
+        transition-property: border-color, color;
+        transition-duration: 220ms;
+        transition-timing-function: ease;
+        transition-delay: 100ms; /*"smooth delay" */
+    }
+
+    .nav-link::after {
+        content: none;
+        /*tposition: absolute;
+        bottom: 15px;
+        left: 50%;
+        ransform: translateX(-50%);
+        width: 0;
+        height: 3px;
+        background-color: var(--color-primary);*/
+     
+    }
+
+    /*.nav-link:hover::after {
+        width: 60%;
+    }*/
+
+    .nav-link:hover,
+    .nav-link:focus-visible {
+        border-color: var(--color-primary);
+    }
+
+     .hero {
+        min-height: calc(100vh - 80px); /* match desktop navbar height */
+        background-position: 20% center;     /* optional: less "cropped to the right" than 70% */
+        /* or try: background-position: center 35%; */
+    }
+
     .hero-heading {
         font-size: 3.2rem;
+    }
+
+    .hero-subtitle {
+    font-size: 3.5rem;
+    margin-bottom: 10%;
+    opacity: 1;
+    color: var(--color-white);
+    margin-top: 5%;
+    border: solid 2px var(--color-white);
+    width: 150%;
     }
 
     .hero-description {
@@ -1047,5 +1100,28 @@ body {
 
     .stats {
         gap: 40px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .main-container {
+        padding: 0 24px;
+    }
+    
+    .hero-container {
+        max-width: 600px;
+    }
+    
+    .hero-heading {
+        max-width: 500px;
+    }
+    
+    .mission-content {
+        max-width: 1100px;
+        gap: 30px;
+    }
+    
+    .about-image {
+        height: 350px;
     }
 }
