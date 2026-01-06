@@ -77,6 +77,18 @@ if (contactForm) {
     });
 }
 
+// Membership form (Netlify) local testing: Live Server doesn't accept POST -> /danke.html
+const membershipForm = document.querySelector('.membership-form');
+if (membershipForm) {
+    membershipForm.addEventListener('submit', function(e) {
+        const isLocalHost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+        if (!isLocalHost) return;
+
+        e.preventDefault();
+        window.location.href = 'danke.html';
+    });
+}
+
 // Navbar background stays solid (optional - remove if not needed)
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');

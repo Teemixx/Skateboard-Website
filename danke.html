@@ -2,11 +2,31 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Danke!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danke! – Skateboard Verein Uster</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Danke für dein Interesse 🙌</h1>
-  <p>Wir melden uns so schnell wie möglich bei dir.</p>
-  <a href="/">Zurück zur Website</a>
+  <section class="hero danke-hero">
+    <video class="danke-hero-video" autoplay muted loop playsinline preload="metadata">
+      <source src="images/skate_1.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-container">
+      <div class="danke-logos" aria-label="Skateboard Verein Uster Logos">
+        <img
+          src="images/Logo_1.png"
+          alt="Logo mit Schrift"
+          class="danke-logo danke-logo--large"
+        >
+        
+      </div>
+
+      <h1 class="danke-title">Danke für dein Interesse</h1>
+      <p class="danke-text">Wir melden uns so schnell wie möglich bei dir.</p>
+      <a href="index.html" class="cta-button">Zurück zur Website</a>
+    </div>
+  </section>
 </body>
 </html>
