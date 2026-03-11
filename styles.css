@@ -219,6 +219,9 @@ body {
     max-width: 420px;
     margin: 0 auto;
     padding: 40px 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hero-heading {
@@ -242,7 +245,7 @@ body {
     margin-bottom: 20%;
     opacity: 0.8;
     color: var(--color-white);
-    margin-top: 60%
+    margin-top: 60%;
 }
 
 .cta-button {
@@ -902,6 +905,11 @@ body {
     gap: 20px;
 }
 
+.hidden-field {
+    position: absolute;
+    left: -9999px;
+}
+
 .form-group input,
 .form-group textarea {
     width: 100%;
@@ -1125,18 +1133,28 @@ body {
         /* or try: background-position: center 35%; */
     }
 
+    .hero-container {
+        max-width: 980px;
+    }
+
+    .hero-heading {
+        max-width: 520px;
+        margin: 0 auto;
+    }
+
     .hero-heading {
         font-size: 3.2rem;
     }
 
     .hero-subtitle {
-    font-size: 3.5rem;
-    margin-bottom: 10%;
-    opacity: 1;
-    color: var(--color-white);
-    margin-top: 5%;
-    border: solid 2px var(--color-white);
-    width: 150%;
+        font-size: clamp(1.9rem, 3.2vw, 3.2rem);
+        opacity: 1;
+        color: var(--color-white);
+        margin: 24px auto 28px;
+        padding: 18px 22px;
+        border: solid 2px var(--color-white);
+        width: 100%;
+        max-width: 900px;
     }
 
     .hero-description {
