@@ -50,6 +50,12 @@ window.addEventListener('scroll', () => {
     });
 });
 
+// Keep FormSubmit redirect on this site's thank-you page for local and live domains.
+const membershipNextUrl = document.getElementById('membership-next-url');
+if (membershipNextUrl) {
+    membershipNextUrl.value = `${window.location.origin}/danke.html`;
+}
+
 // Navbar background stays solid (optional - remove if not needed)
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
