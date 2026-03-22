@@ -376,27 +376,36 @@ body {
     border-radius: 12px;
 }
 
+.mission-card-photo {
+    display: none;
+}
+
 .mission-card {
     background: var(--color-primary);
     border-radius: 22px;
     box-shadow: 0 20px 35px rgba(239, 81, 50, 0.25);
     text-align: left;
     color: var(--color-white);
-    padding: 22px;
+    padding: 20px;
 }
 
 .mission-container {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    /*justify-content: space-between;*/
+    gap: 16px;
 }
 
 .mission .mission-card > a {
   display: block;                  /* keeps the card clickable and removes the default a tag styling */
   color: inherit;
   text-decoration: none;
+}
+
+.mission-text {
+    font-size: 1rem;
+    opacity: 0.95;
 }
 
 .mission-card:hover {
@@ -812,6 +821,60 @@ body {
     text-align: center;
 }
 
+.vorstand {
+    padding: 60px 0;
+    background-color: var(--color-section-bg);
+}
+
+.vorstand-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 960px;
+    margin: 40px auto 0;
+}
+
+.vorstand-card {
+    background: var(--color-primary);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 20px 35px rgba(239, 81, 50, 0.25);
+}
+
+.vorstand-image {
+    display: block;
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.vorstand-image-ivan {
+    object-position: center 50%;
+}
+
+.vorstand-body {
+    padding: 24px;
+}
+
+.vorstand-body h3 {
+    font-size: 1.5rem;
+    color: var(--color-white);
+    margin-bottom: 8px;
+}
+
+.vorstand-role {
+    color: var(--color-white);
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.vorstand-body p {
+    color: var(--color-white);
+    margin-bottom: 0;
+    opacity: 0.95;
+}
+
 /* Contact Section */
 .contact {
     padding: 60px 0;
@@ -1028,6 +1091,14 @@ body {
         gap: 40px;
     }
 
+    .vorstand-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .vorstand-image {
+        height: 420px;
+    }
+
     .mitglied-content {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 30px;
@@ -1152,9 +1223,9 @@ body {
         color: var(--color-white);
         margin: 24px auto 28px;
         padding: 18px 22px;
-        border: solid 2px var(--color-white);
+        /*border: solid 2px var(--color-white);*/
         width: 100%;
-        max-width: 900px;
+        max-width: 980px;
     }
 
     .hero-description {
@@ -1179,6 +1250,20 @@ body {
         gap: 60px;
     }
 
+    .contact-info {
+        grid-template-columns: repeat(4, minmax(300px, 1fr));
+        max-width: 1500px;
+        gap: 18px;
+    }
+
+    .contact-card {
+        padding: 18px 20px;
+    }
+
+    .contact-text {
+        white-space: nowrap;
+    }
+
     .mitglied-content {
         grid-template-columns: 1fr 1fr;
         gap: 40px;
@@ -1186,6 +1271,18 @@ body {
 
     .mission-content {
         grid-template-columns: repeat(3, minmax(220px, 1fr));
+    }
+
+    .mission-card-photo {
+        display: block;
+    }
+
+    .mission-logo {
+        display: none;
+    }
+
+    .mission-content > .mission-img:last-of-type {
+        display: none;
     }
 
     .stats {
@@ -1197,9 +1294,9 @@ body {
     .main-container {
         padding: 0 24px;
     }
-    
-    .hero-container {
-        max-width: 600px;
+
+    .contact .main-container {
+        max-width: 1500px;
     }
     
     .hero-heading {
