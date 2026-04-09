@@ -509,6 +509,54 @@ body {
     margin-top: 30px;
 }
 
+.event-feature {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 30px;
+    background: var(--color-surface);
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1);
+}
+
+.event-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center top;
+}
+
+.event-copy {
+    padding: 24px;
+}
+
+.event-copy h3 {
+    color: var(--color-text);
+    margin-bottom: 12px;
+}
+
+.event-copy h3.skatekurs {
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.event-copy p {
+    font-size: 1.05rem;
+    color: var(--color-text-secondary);
+}
+
+.event-link {
+    color: var(--color-primary);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.event-link:hover {
+    color: var(--color-primary-dark);
+}
+
 .no-events {
     text-align: center;
     padding: 40px 24px;
@@ -1082,6 +1130,22 @@ body {
         gap: 24px;
     }
 
+    .event-feature {
+        grid-template-columns: minmax(280px, 420px) 1fr;
+        align-items: stretch;
+    }
+
+    .event-image {
+        height: 100%;
+        min-height: 320px;
+        object-fit: cover;
+        object-position: center top;
+    }
+
+    .event-copy h3.skatekurs {
+        font-size: 1.2rem;
+    }
+
     .products-container {
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     }
@@ -1198,10 +1262,14 @@ body {
         border-color: var(--color-primary);
     }
 
-     .hero {
+    .hero {
         min-height: calc(100vh - 80px); /* match desktop navbar height */
         background-position: 20% center;     /* optional: less "cropped to the right" than 70% */
         /* or try: background-position: center 35%; */
+    }
+
+    .event-copy h3.skatekurs {
+        font-size: 1.3rem;
     }
 
     .hero-container {
