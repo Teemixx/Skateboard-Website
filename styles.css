@@ -530,11 +530,14 @@ body {
 
 .event-copy {
     padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .event-copy h3 {
     color: var(--color-text);
-    margin-bottom: 12px;
+    margin-bottom: 0;
 }
 
 .event-copy h3.skatekurs {
@@ -545,6 +548,16 @@ body {
 .event-copy p {
     font-size: 1.05rem;
     color: var(--color-text-secondary);
+    margin: 0;
+}
+
+.event-detail-image {
+    display: block;
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    align-self: center;
+    border-radius: 14px;
 }
 
 .event-link {
@@ -1146,6 +1159,10 @@ body {
         font-size: 1.2rem;
     }
 
+    .event-detail-image {
+        max-width: 210px;
+    }
+
     .products-container {
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     }
@@ -1270,6 +1287,10 @@ body {
 
     .event-copy h3.skatekurs {
         font-size: 1.3rem;
+    }
+
+    .event-detail-image {
+        max-width: 240px;
     }
 
     .hero-container {
