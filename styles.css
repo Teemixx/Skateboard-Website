@@ -58,8 +58,8 @@ body {
 }
 
 .nav-logo-image {
-    max-width: 180px;
-    max-height: 60px;
+    max-width: 210px;
+    max-height: 90px;
 }
 
 .nav-container {
@@ -138,8 +138,8 @@ body {
     cursor: pointer;
     justify-content: center;
     align-items: center;
-    width: 44px;
-    height: 44px;
+    width: 50px;
+    height: 50px;
     padding: 8px;
     gap: 0;
     border-radius: 12px;
@@ -242,10 +242,10 @@ body {
 
 .hero-subtitle {
     font-size: 1.5rem;
-    margin-bottom: 20%;
+    margin-bottom: 90%;
     opacity: 0.8;
     color: var(--color-white);
-    margin-top: 60%;
+    margin-top: 20%;
 }
 
 .cta-button {
@@ -672,6 +672,48 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+/* Donation Section */
+.donation-section {
+    padding: 60px 0;
+    background-color: var(--color-section-bg);
+}
+
+.donation-box {
+    display: grid;
+    gap: 18px;
+    max-width: 760px;
+    margin: 34px auto 0;
+    padding: 28px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+
+.donation-detail {
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.55;
+}
+
+.donation-detail:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.donation-detail strong {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--color-text);
+    font-size: 1rem;
+}
+
+.donation-detail span {
+    display: block;
 }
 
 /* Newsletter Form */
