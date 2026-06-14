@@ -56,6 +56,58 @@ if (membershipNextUrl) {
     membershipNextUrl.value = `${window.location.origin}/danke.html`;
 }
 
+const eventSlideshow = document.querySelector('.event-slideshow');
+if (eventSlideshow) {
+    const slides = Array.from(eventSlideshow.querySelectorAll('.event-slide'));
+    const dots = Array.from(eventSlideshow.querySelectorAll('.event-slide-dot'));
+    const previousButton = eventSlideshow.querySelector('.event-slide-prev');
+    const nextButton = eventSlideshow.querySelector('.event-slide-next');
+    let activeSlide = 0;
+    let slideTimer;
+
+    const showSlide = (index) => {
+        activeSlide = (index + slides.length) % slides.length;
+
+        slides.forEach((slide, slideIndex) => {
+            slide.classList.toggle('is-active', slideIndex === activeSlide);
+        });
+
+        dots.forEach((dot, dotIndex) => {
+            dot.classList.toggle('is-active', dotIndex === activeSlide);
+        });
+    };
+
+    const startSlideshow = () => {
+        slideTimer = window.setInterval(() => {
+            showSlide(activeSlide + 1);
+        }, 5000);
+    };
+
+    const restartSlideshow = () => {
+        window.clearInterval(slideTimer);
+        startSlideshow();
+    };
+
+    previousButton.addEventListener('click', () => {
+        showSlide(activeSlide - 1);
+        restartSlideshow();
+    });
+
+    nextButton.addEventListener('click', () => {
+        showSlide(activeSlide + 1);
+        restartSlideshow();
+    });
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            showSlide(index);
+            restartSlideshow();
+        });
+    });
+
+    startSlideshow();
+}
+
 // Navbar background stays solid (optional - remove if not needed)
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
