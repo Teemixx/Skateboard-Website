@@ -5,7 +5,7 @@
 }
 
 :root {
-    --color-primary: #ef5132;
+    --color-primary: #e04915;
     --color-primary-dark: #c43e1e;
     --color-primary-light: #ff7a5c;
     --color-text: #333333;
@@ -155,7 +155,7 @@ body {
     width: 22px;
     height: 3px;
     border-radius: 2px;
-    background-color: #ef5132 !important;
+    background-color: #e04915 !important;
     display: block;
     margin: 3px 0;
 }
@@ -383,7 +383,7 @@ body {
 .mission-card {
     background: var(--color-primary);
     border-radius: 22px;
-    box-shadow: 0 20px 35px rgba(239, 81, 50, 0.25);
+    box-shadow: 0 20px 35px rgba(224, 73, 21, 0.25);
     text-align: left;
     color: var(--color-white);
     padding: 20px;
@@ -410,7 +410,7 @@ body {
 
 .mission-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 30px 50px rgba(239, 81, 50, 0.25);
+    box-shadow: 0 30px 50px rgba(224, 73, 21, 0.25);
 }
 
 .mission-card h3 {
@@ -570,7 +570,7 @@ body {
     margin-bottom: 14px;
     padding: 4px 12px;
     border-left: 3px solid var(--color-primary);
-    background: rgba(239, 81, 50, 0.08);
+    background: rgba(224, 73, 21, 0.08);
     color: var(--color-primary-dark);
     font-size: 0.8rem;
     font-weight: 700;
@@ -585,7 +585,7 @@ body {
 
 .event-action-card {
     padding: 20px;
-    border: 1px solid rgba(239, 81, 50, 0.18);
+    border: 1px solid rgba(224, 73, 21, 0.18);
     border-radius: 12px;
     background: var(--color-white);
 }
@@ -1115,7 +1115,7 @@ body {
     background: var(--color-primary);
     border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 20px 35px rgba(239, 81, 50, 0.25);
+    box-shadow: 0 20px 35px rgba(224, 73, 21, 0.25);
 }
 
 .vorstand-image {
