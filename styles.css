@@ -260,12 +260,33 @@ body {
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
+    border: 2px solid transparent;
 }
 
 .cta-button:hover {
     background-color: var(--color-primary-dark);
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.cta-button.cta-secondary {
+    background-color: rgba(0, 0, 0, 0.45);
+    border: 2px solid var(--color-white);
+    color: var(--color-white);
+}
+
+.cta-button.cta-secondary:hover {
+    background-color: var(--color-white);
+    color: var(--color-text);
+    border-color: var(--color-white);
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Danke page */
@@ -497,6 +518,22 @@ body {
 
 .news-link:hover {
     color: var(--color-primary-dark);
+}
+
+/* Course Section */
+.course-card {
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.course-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 /* Events Section */
@@ -821,6 +858,12 @@ body {
     font-size: 1.5rem;
     margin-bottom: 25px;
     color: var(--color-text);
+}
+
+.mitglied-form p {
+    color: var(--color-text-secondary);
+    margin-bottom: 20px;
+    line-height: 1.6;
 }
 
 .membership-form {

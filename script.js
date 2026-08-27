@@ -55,6 +55,10 @@ const membershipNextUrl = document.getElementById('membership-next-url');
 if (membershipNextUrl) {
     membershipNextUrl.value = `${window.location.origin}/danke.html`;
 }
+const courseNextUrl = document.getElementById('course-next-url');
+if (courseNextUrl) {
+    courseNextUrl.value = `${window.location.origin}/danke.html`;
+}
 
 const eventSlideshow = document.querySelector('.event-slideshow');
 if (eventSlideshow) {
