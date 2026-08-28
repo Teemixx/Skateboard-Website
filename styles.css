@@ -323,10 +323,17 @@ body {
     margin: 0 auto 22px;
 }
 
+.danke-logo-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
 .danke-logo {
-    height: 64px;
+    height: 72px;
     width: auto;
-    max-width: 48%;
+    object-fit: contain;
 }
 
 .danke-logo--large {
@@ -347,6 +354,36 @@ body {
     opacity: 0.92;
     font-size: 1.05rem;
     margin-bottom: 22px;
+}
+
+/* Unsubscribe page */
+.unsubscribe-form {
+    margin-top: 24px;
+    text-align: left;
+}
+
+.unsubscribe-submit-btn {
+    width: 100%;
+    font-weight: 700;
+}
+
+.unsubscribe-cancel {
+    margin-top: 18px;
+}
+
+.unsubscribe-cancel-link {
+    color: var(--color-white);
+    font-size: 0.9rem;
+    text-decoration: underline;
+    transition: opacity 0.2s ease;
+}
+
+.unsubscribe-cancel-link:hover {
+    opacity: 0.8;
+}
+
+.unsubscribe-success {
+    display: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
