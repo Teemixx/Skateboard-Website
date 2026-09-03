@@ -799,6 +799,14 @@ body {
     color: var(--color-primary-dark);
 }
 
+.event-btn {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    align-self: flex-start;
+    margin-top: 8px;
+}
+
 .no-events {
     text-align: center;
     padding: 40px 24px;
