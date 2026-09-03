@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kurs-Verteiler abmelden – Skateboard Verein Uster</title>
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <section class="hero danke-hero">
+    <video class="danke-hero-video" autoplay muted loop playsinline preload="metadata">
+      <source src="images/skate_1.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-container">
+      <div class="danke-logos" aria-label="Skateboard Verein Uster Logos">
+        <a href="index.html" class="danke-logo-link">
+          <img src="images/svu_logo_v2_final.png" alt="Skateboard Verein Uster Logo" class="danke-logo">
+        </a>
+      </div>
+
+      <!-- Success State (shown when ?success=true) -->
+      <div id="unsubscribe-success" class="unsubscribe-success">
+        <h1 class="danke-title">Erfolgreich abgemeldet</h1>
+        <p class="danke-text">Deine E-Mail-Adresse wurde aus der Interessentenliste für Skateboard-Kurse entfernt.</p>
+        <a href="index.html" class="cta-button">Zurück zur Website</a>
+      </div>
+
+      <!-- Form State (shown by default) -->
+      <div id="unsubscribe-form-container">
+        <h1 class="danke-title">Kurs-Verteiler abmelden</h1>
+        <p class="danke-text" id="unsubscribe-intro">Möchtest du dich wirklich von der Interessentenliste für Skateboard-Kurse abmelden?</p>
+
+        <form
+          id="unsubscribe-form"
+          class="membership-form unsubscribe-form"
+          action="https://formsubmit.co/skateboardvereinuster@gmail.com"
+          method="POST"
+        >
+          <input type="hidden" name="_next" id="unsubscribe-next-url" value="/abmelden.html?success=true">
+          <input type="hidden" name="_subject" id="unsubscribe-subject" value="Kurs-Verteiler Abmeldung via Webseite">
+          <input type="hidden" name="_captcha" value="true">
+          <input type="text" name="_honey" class="hidden-field" tabindex="-1" autocomplete="off">
+
+          <div class="form-group">
+            <input
+              type="email"
+              id="unsubscribe-email"
+              name="email"
+              placeholder="Deine E-Mail-Adresse"
+              required
+            >
+          </div>
+
+          <button type="submit" class="submit-btn unsubscribe-submit-btn">
+            Von Kurs-Interessentenliste abmelden
+          </button>
+        </form>
+
+        <div class="unsubscribe-cancel">
+          <a href="index.html" class="unsubscribe-cancel-link">
+            Abbrechen & zurück zur Website
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const emailParam = urlParams.get('unsubscribe') || urlParams.get('email');
+    const isSuccess = urlParams.get('success') === 'true' || urlParams.get('status') === 'success';
+
+    const successContainer = document.getElementById('unsubscribe-success');
+    const formContainer = document.getElementById('unsubscribe-form-container');
+    const emailInput = document.getElementById('unsubscribe-email');
+    const nextUrlInput = document.getElementById('unsubscribe-next-url');
+    const subjectInput = document.getElementById('unsubscribe-subject');
+
+    if (isSuccess) {
+      formContainer.style.display = 'none';
+      successContainer.style.display = 'block';
+    } else {
+      if (emailParam) {
+        const trimmedEmail = emailParam.trim();
+        emailInput.value = trimmedEmail;
+        subjectInput.value = `Kurs-Verteiler Abmeldung: ${trimmedEmail}`;
+        document.getElementById('unsubscribe-intro').innerHTML =
+          `Möchtest du <strong>${trimmedEmail}</strong> wirklich von der Interessentenliste für Skateboard-Kurse abmelden?`;
+      }
+      if (nextUrlInput) {
+        nextUrlInput.value = `${window.location.origin}/abmelden.html?success=true`;
+      }
+    }
+  </script>
+</body>
+</html>
