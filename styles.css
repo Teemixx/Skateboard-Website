@@ -600,6 +600,7 @@ body {
     height: auto;
     object-fit: contain;
     object-position: center top;
+    align-self: start;
 }
 
 .event-copy {
@@ -1453,14 +1454,15 @@ body {
 
     .event-feature {
         grid-template-columns: minmax(280px, 420px) 1fr;
-        align-items: stretch;
+        align-items: start;
     }
 
     .event-image {
-        height: 100%;
-        min-height: 320px;
-        object-fit: cover;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
         object-position: center top;
+        align-self: start;
     }
 
     .event-copy h3.skatekurs {
