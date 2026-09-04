@@ -5,9 +5,9 @@
 }
 
 :root {
-    --color-primary: #e04915;
-    --color-primary-dark: #c43e1e;
-    --color-primary-light: #ff7a5c;
+    --color-primary: #dc0c11;
+    --color-primary-dark: #b80a0e;
+    --color-primary-light: #ea353a;
     --color-text: #333333;
     --color-text-secondary: #666666;
     --color-surface: #ffffff;
@@ -15,7 +15,7 @@
     --color-section-bg: #f8f9fa;
     --color-border: #dddddd;
     --color-muted: #cccccc;
-    --color-accent: #f7931e;
+    --color-accent: #ea353a;
     --color-nav-bg: #111111;
     --color-hero-gradient-start: #667eea;
     --color-hero-gradient-end: #764ba2;
@@ -155,7 +155,7 @@ body {
     width: 22px;
     height: 3px;
     border-radius: 2px;
-    background-color: #e04915 !important;
+    background-color: var(--color-primary) !important;
     display: block;
     margin: 3px 0;
 }
@@ -439,9 +439,9 @@ body {
 }
 
 .mission-card {
-    background: var(--color-primary);
+    background: #d94145;
     border-radius: 22px;
-    box-shadow: 0 20px 35px rgba(224, 73, 21, 0.25);
+    box-shadow: 0 20px 35px rgba(217, 65, 69, 0.25);
     text-align: left;
     color: var(--color-white);
     padding: 20px;
@@ -468,7 +468,7 @@ body {
 
 .mission-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 30px 50px rgba(224, 73, 21, 0.25);
+    box-shadow: 0 30px 50px rgba(217, 65, 69, 0.25);
 }
 
 .mission-card h3 {
@@ -645,7 +645,7 @@ body {
     margin-bottom: 14px;
     padding: 4px 12px;
     border-left: 3px solid var(--color-primary);
-    background: rgba(224, 73, 21, 0.08);
+    background: rgba(220, 12, 17, 0.08);
     color: var(--color-primary-dark);
     font-size: 0.8rem;
     font-weight: 700;
@@ -660,7 +660,7 @@ body {
 
 .event-action-card {
     padding: 20px;
-    border: 1px solid rgba(224, 73, 21, 0.18);
+    border: 1px solid rgba(220, 12, 17, 0.18);
     border-radius: 12px;
     background: var(--color-white);
 }
@@ -1170,7 +1170,7 @@ body {
 
 .about-image {
     height: 180px;
-    background-color: var(--color-primary);
+    background-color: #d94145;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -1201,10 +1201,10 @@ body {
 }
 
 .vorstand-card {
-    background: var(--color-primary);
+    background: #d94145;
     border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 20px 35px rgba(224, 73, 21, 0.25);
+    box-shadow: 0 20px 35px rgba(217, 65, 69, 0.25);
 }
 
 .vorstand-image {
