@@ -592,9 +592,7 @@ body {
 }
 
 .event-feature {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
+    display: block;
     margin-top: 30px;
     background: var(--color-surface);
     border-radius: 22px;
@@ -644,7 +642,7 @@ body {
 }
 
 .event-action {
-    padding: 0 24px 28px;
+    padding: 28px 24px;
 }
 
 .event-action-label {
@@ -1460,11 +1458,6 @@ body {
         gap: 24px;
     }
 
-    .event-feature {
-        grid-template-columns: minmax(280px, 420px) 1fr;
-        align-items: start;
-    }
-
     .event-image {
         width: 100%;
         height: auto;
@@ -1482,8 +1475,7 @@ body {
     }
 
     .event-action {
-        grid-column: 1 / -1;
-        padding: 4px 32px 32px;
+        padding: 32px;
     }
 
     .products-container {
